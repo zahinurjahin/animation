@@ -1,0 +1,114 @@
+*{
+    box-sizing: border-box;
+}
+   img{
+    max-width: 200px;
+    height: auto;
+    border: 2px solid black;
+    display: block;
+    margin: 0 auto;
+    margin-top: 100px;
+    border-radius: 50px;
+    transition: 3s;
+    animation-name: img-anim;
+    animation-duration: 3s;
+
+   }
+  img:hover{
+    transform: scale(1.2) rotate(360deg);
+  }@keyframes img-anim {
+    from{
+        max-width: 200px;
+    }
+    to{
+        max-width: 400px;
+    }
+  }
+ *{
+    box-sizing: border-box;}
+    .container{
+      width: 600px;
+      background-color: aqua;
+      padding: 25px;
+
+    }
+    .container li{
+      list-style-type: none;
+      font-weight: bolder;
+      margin: 50px 0;
+      text-transform: uppercase;
+      position: relative;
+
+    }
+    .container li::before{
+      content:"";
+      position: absolute;
+      top: calc(100% + 5px);
+      left: 0;
+      height: 25px;
+      width: 100%;
+      background-color:pink;
+      border-radius: 1000px;
+
+    }
+    .container li::after{
+      content:"";
+      position: absolute;
+      top: calc(100% + 5px);
+      left: 0;
+
+      height: 25px;
+      width: 0;
+      background-color:yellow;
+      border-radius: 1000px;
+      animation-duration: 3s;
+      animation-timing-function: linear;
+      animation-delay: 2s;
+      animation-iteration-count: 3;
+      animation-direction: initial;
+      animation-fill-mode: forwards;
+      
+    }
+    .container li::after{
+      animation-name: li;
+    }
+    @keyframes li{
+      to{
+        width: 90%;
+      }
+    }
+    
+    label{
+      color: blue;
+      font-weight: bolder;
+      font-style: italic;
+    }
+    input{
+      margin: 5px;
+      border-color: yellow;
+      border-radius: 1000px;
+      font-weight: bold;
+      background-color: aqua;
+      color: whitecs;
+    }
+    .fname{
+      color:red;
+      background-color: yellow;
+    }
+    textarea{
+      resize: none;
+      width: 50%;
+      padding: 20px;
+      border: 5px solid red;
+      border-radius: 50px;
+    }
+    input[type="button"] {
+      background-color: yellow;
+      border: none;
+      width: 100px;
+      color: black;
+      cursor: grabbing;
+      padding: 10px;
+      
+
+    }
